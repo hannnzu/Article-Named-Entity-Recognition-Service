@@ -65,7 +65,8 @@ TITLE_BODY_SEPARATOR: str = "\n\n"
 #   multibahasa: "xx_ent_wiki_sm"
 #   fine-tuned: path ke model tersimpan, mis. "models/ner_finetuned"
 # ──────────────────────────────────────────────────────────────
-MODEL_NAME: str = os.getenv("MODEL_NAME", "en_core_web_sm")
+_default_model = str(MODELS_DIR / "ner_model") if (MODELS_DIR / "ner_model").exists() else "en_core_web_sm"
+MODEL_NAME: str = os.getenv("MODEL_NAME", _default_model)
 
 # ──────────────────────────────────────────────────────────────
 # Data split

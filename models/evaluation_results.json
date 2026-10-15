@@ -1,0 +1,315 @@
+{
+  "test_examples_count": 12,
+  "baseline": {
+    "precision": 0.4625,
+    "recall": 0.5211,
+    "f1": 0.4901,
+    "tp": 37,
+    "fp": 43,
+    "fn": 34,
+    "per_label": {
+      "DATE": {
+        "tp": 8,
+        "fp": 7,
+        "fn": 3,
+        "precision": 0.5333,
+        "recall": 0.7273,
+        "f1": 0.6154,
+        "support": 11
+      },
+      "EVENT": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "GPE": {
+        "tp": 13,
+        "fp": 7,
+        "fn": 4,
+        "precision": 0.65,
+        "recall": 0.7647,
+        "f1": 0.7027,
+        "support": 17
+      },
+      "LOC": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "ORG": {
+        "tp": 13,
+        "fp": 14,
+        "fn": 14,
+        "precision": 0.4815,
+        "recall": 0.4815,
+        "f1": 0.4815,
+        "support": 27
+      },
+      "PERSON": {
+        "tp": 3,
+        "fp": 14,
+        "fn": 5,
+        "precision": 0.1765,
+        "recall": 0.375,
+        "f1": 0.24,
+        "support": 8
+      }
+    }
+  },
+  "trained": {
+    "precision": 0.494,
+    "recall": 0.5775,
+    "f1": 0.5325,
+    "tp": 41,
+    "fp": 42,
+    "fn": 30,
+    "per_label": {
+      "DATE": {
+        "tp": 8,
+        "fp": 8,
+        "fn": 3,
+        "precision": 0.5,
+        "recall": 0.7273,
+        "f1": 0.5926,
+        "support": 11
+      },
+      "EVENT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "GPE": {
+        "tp": 13,
+        "fp": 8,
+        "fn": 4,
+        "precision": 0.619,
+        "recall": 0.7647,
+        "f1": 0.6842,
+        "support": 17
+      },
+      "LOC": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4
+      },
+      "ORG": {
+        "tp": 17,
+        "fp": 9,
+        "fn": 10,
+        "precision": 0.6538,
+        "recall": 0.6296,
+        "f1": 0.6415,
+        "support": 27
+      },
+      "PERSON": {
+        "tp": 3,
+        "fp": 17,
+        "fn": 5,
+        "precision": 0.15,
+        "recall": 0.375,
+        "f1": 0.2143,
+        "support": 8
+      }
+    }
+  },
+  "sample_errors_baseline": [
+    {
+      "example_id": "eval_01_multitoken_org_repeat",
+      "type": "False Positive",
+      "text": "the Overnight Policy Rate",
+      "predicted_label": "EVENT",
+      "start": 121,
+      "end": 146,
+      "context": "ysia decided to maintain the Overnight Policy Rate (OPR) at 3.00 percent on"
+    },
+    {
+      "example_id": "eval_01_multitoken_org_repeat",
+      "type": "False Positive",
+      "text": "Malaysia",
+      "predicted_label": "GPE",
+      "start": 12,
+      "end": 20,
+      "context": "Bank Negara Malaysia maintains OPR at 3.00% i"
+    },
+    {
+      "example_id": "eval_01_multitoken_org_repeat",
+      "type": "False Negative",
+      "text": "Bank Negara Malaysia",
+      "expected_label": "ORG",
+      "start": 0,
+      "end": 20,
+      "context": "Bank Negara Malaysia maintains OPR at 3.00% i"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Seri Zamzamzamin",
+      "predicted_label": "PERSON",
+      "start": 31,
+      "end": 47,
+      "context": "k Chairman Tan Sri Dato' Seri Zamzamzamin addresses AGM\n\nMaybank G"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Tan Sri Dato'",
+      "predicted_label": "PERSON",
+      "start": 17,
+      "end": 30,
+      "context": "Maybank Chairman Tan Sri Dato' Seri Zamzamzamin address"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Seri Zamzamzamin",
+      "predicted_label": "PERSON",
+      "start": 136,
+      "end": 152,
+      "context": "a Maybank. Tan Sri Dato' Seri Zamzamzamin expressed confidence in "
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Menara Maybank",
+      "predicted_label": "GPE",
+      "start": 106,
+      "end": 120,
+      "context": " its annual gathering in Menara Maybank. Tan Sri Dato' Seri Zamz"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Tan Sri Dato'",
+      "predicted_label": "PERSON",
+      "start": 122,
+      "end": 135,
+      "context": "ering in Menara Maybank. Tan Sri Dato' Seri Zamzamzamin express"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "AGM\n\nMaybank Group",
+      "predicted_label": "ORG",
+      "start": 58,
+      "end": 76,
+      "context": "ri Zamzamzamin addresses AGM\n\nMaybank Group held its annual gatherin"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Group",
+      "predicted_label": "ORG",
+      "start": 224,
+      "end": 229,
+      "context": "e for Q3 2026, alongside Group CEO Datuk Khairussaleh R"
+    }
+  ],
+  "sample_errors_trained": [
+    {
+      "example_id": "eval_01_multitoken_org_repeat",
+      "type": "False Positive",
+      "text": "the Overnight Policy Rate",
+      "predicted_label": "ORG",
+      "start": 121,
+      "end": 146,
+      "context": "ysia decided to maintain the Overnight Policy Rate (OPR) at 3.00 percent on"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Menara Maybank",
+      "predicted_label": "ORG",
+      "start": 106,
+      "end": 120,
+      "context": " its annual gathering in Menara Maybank. Tan Sri Dato' Seri Zamz"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Seri Zamzamzamin",
+      "predicted_label": "PERSON",
+      "start": 31,
+      "end": 47,
+      "context": "k Chairman Tan Sri Dato' Seri Zamzamzamin addresses AGM\n\nMaybank G"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Tan Sri Dato'",
+      "predicted_label": "PERSON",
+      "start": 17,
+      "end": 30,
+      "context": "Maybank Chairman Tan Sri Dato' Seri Zamzamzamin address"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Seri Zamzamzamin",
+      "predicted_label": "PERSON",
+      "start": 136,
+      "end": 152,
+      "context": "a Maybank. Tan Sri Dato' Seri Zamzamzamin expressed confidence in "
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Tan Sri Dato'",
+      "predicted_label": "PERSON",
+      "start": 122,
+      "end": 135,
+      "context": "ering in Menara Maybank. Tan Sri Dato' Seri Zamzamzamin express"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "AGM",
+      "predicted_label": "ORG",
+      "start": 58,
+      "end": 61,
+      "context": "ri Zamzamzamin addresses AGM\n\nMaybank Group held its "
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "Group",
+      "predicted_label": "ORG",
+      "start": 224,
+      "end": 229,
+      "context": "e for Q3 2026, alongside Group CEO Datuk Khairussaleh R"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Positive",
+      "text": "annual",
+      "predicted_label": "DATE",
+      "start": 86,
+      "end": 92,
+      "context": "\n\nMaybank Group held its annual gathering in Menara Mayb"
+    },
+    {
+      "example_id": "eval_02_honorifics_person_loc",
+      "type": "False Negative",
+      "text": "Maybank Group",
+      "expected_label": "ORG",
+      "start": 63,
+      "end": 76,
+      "context": "mzamzamin addresses AGM\n\nMaybank Group held its annual gatherin"
+    }
+  ]
+}

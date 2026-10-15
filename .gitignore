@@ -10,7 +10,7 @@ sample/
 !data/evaluation_examples.json
 
 # ---------- Model artefak besar ---------
-models/
+models/ner_model/
 *.model
 *.pkl
 *.bin
