@@ -1,0 +1,7 @@
+{
+  "_note": "File ini adalah placeholder. Isi dengan ≥10 contoh artikel berlabel sesuai Bagian 7.1 brief.",
+  "version": "1.0",
+  "description": "Contoh evaluasi artikel dengan anotasi span NER (human-reviewed)",
+  "label_schema": ["PERSON", "ORG", "GPE", "LOC", "DATE", "EVENT"],
+  "examples": []
+}

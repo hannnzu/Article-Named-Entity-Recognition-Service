@@ -1,0 +1,50 @@
+{
+  "total_rows": 1291,
+  "rows_per_clipping": {
+    "Maybank Group": 534,
+    "CIMB Group Malaysia": 347,
+    "Maybank CSR": 160,
+    "RHB Bank": 105,
+    "Hong Leong Bank": 96,
+    "Maybank Foundation": 29,
+    "MDV": 18,
+    "Public Bank Berhad": 2
+  },
+  "duplicates_by_original_id": 445,
+  "unique_original_id": 846,
+  "unique_title_body": 741,
+  "duplicates_by_title_body": 550,
+  "unique_body": 720,
+  "duplicates_by_body": 571,
+  "empty_title": 0,
+  "empty_body": 0,
+  "language_distribution_after_dedup_original_id": {
+    "en": 656,
+    "ms": 146,
+    "zh": 28,
+    "id": 14,
+    "vi": 1,
+    "es": 1
+  },
+  "body_length_stats": {
+    "count": 1291,
+    "min": 6,
+    "max": 186027,
+    "mean": 6025.9,
+    "median": 3039.0,
+    "p25": 1881.5,
+    "p75": 4417.0,
+    "articles_lt_200_chars": 9,
+    "articles_gt_20000_chars": 31
+  },
+  "entities_column": {
+    "total_rows": 1291,
+    "non_empty": 0,
+    "empty": 1291,
+    "note": "Kolom 'entities' kosong di semua baris -> tidak tersedia label ground truth dari sumber data. Tidak dipakai sebagai supervisi tanpa anotasi manual."
+  },
+  "reference_check": {
+    "deviations": {},
+    "status": "OK — semua sesuai referensi"
+  }
+}
